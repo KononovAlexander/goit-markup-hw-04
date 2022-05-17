@@ -24,6 +24,9 @@ body {
 
 .overlay{
     background: rgba(47, 48, 58, 0.4);
+    background-repeat: no-repeat;
+    max-width: 1600px;
+    margin: 0 auto;
     background-image:linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)
 ), url(../images/Imghero-bg.jpg);
 }
@@ -38,6 +41,12 @@ body {
     justify-content: center;
     padding: 0;
     margin: 0;
+}
+
+.icon-centered {
+    display: flex;
+    justify-content: center;
+    align-items:center;
 }
 
 .section{
@@ -79,6 +88,10 @@ body {
     align-items: center;
 }
 
+.icon-color {
+    fill:currentColor;
+}
+
 .main-nav {
     display: flex;
     align-items:center;
@@ -100,8 +113,8 @@ body {
 }
 
 .contacts-item {
-    display: flex;
-    align-items:center;
+    /* display: flex; */
+    /* align-items:center; */
     margin-left: auto;
     color: var(--text-color);
     
@@ -132,7 +145,7 @@ body {
 .main-nav-item a:focus,
 .contacts-item:hover,
 .contacts-item:focus {
-    color: var(--brand-color)
+    color: var(--brand-color);
 }
 
 .hero {
@@ -190,18 +203,16 @@ body {
 }
 
 .skills-icon-box {
-    display: flex;
-    justify-content: center ;
-    padding: 25px 0;
     margin-bottom: 30px;
     background-color:#F5F4FA;
     border-radius: 4px;
+    width:270px;
+    height: 120px;
 }
 
 .skills-item {
     margin: 0 30px 0 0;
     text-align: left;
-    flex-basis: 270px;
 }
 
 .skills-item:last-child{
@@ -264,8 +275,8 @@ body {
 
 .ourTeam .text-container {
     display: block;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 } 
 
 .ourTeam-item h3 {
@@ -281,38 +292,29 @@ body {
 
 .socials-list.list {
     padding: 0;
-    margin: 0 auto 30px;
+    margin: 0 auto;
 }
 
 .socials-item {
-    display: inline-block;   
     color: rgba(175, 177, 184, 1);
-    border-radius:50%;
     margin-right: 10px;
 }
 
-.socials-item:hover,
-.socials-item:focus {
-    background-color: var(--brand-color);
-    color:#ffffff;
-}
-
 .socials-item a {
-    display: flex;
     width: 44px;
     height: 44px; 
-    justify-content: center;
-    align-items:center
+    border-radius:50%;
+}
+
+.socials-item a:hover,
+.socials-item a:focus {
+    background-color: var(--brand-color);
+    color:#ffffff;
+    border-color:var(--brand-color);
 }
 
 .socials-item:last-child {
     margin-right: 0;
-}
-
-.socials-item svg{
-    width: 20px;
-    height: 20px;
-    fill:currentColor;
 }
 
 .partners {
@@ -336,28 +338,20 @@ margin: 0 0 50px;
 }
 
 .partners-item {
-    display: inline-block;
     margin-right: 30px;
-    color:#AFB1B8;
-    border: 1px solid  currentColor;
-    border-radius: 4px;
 }
 
 .partners-item a {
-    display: flex;
     width: 170px;
     height: 92px;
-    justify-content: center;
-    align-items:center;
+    color:#AFB1B8;
+    border-radius: 4px;
+    border: 1px solid  currentColor;
 }
 
 .partners-item:hover,
 .partners-item:focus {
     color: var(--brand-color);
-}
-
-.partners-item svg {
-    fill:currentColor;
 }
 
 .portfolio-nav.list {
@@ -389,6 +383,7 @@ margin: 0 0 50px;
 .portfolio-nav-item button:focus {
     background-color: var(--brand-color);
     color: #ffffff;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     cursor: pointer;
 }
 
@@ -397,12 +392,17 @@ margin: 0 0 50px;
 }
 
 .portfolio-list-item {
-    width: 370px;
     padding: 0;
     margin-right: 30px;
     margin-bottom: 30px;
 }
-.portfolio-list-item:hover{
+
+.portfolio-list-item a {
+    display: block;
+    width: 370px;
+}
+
+.portfolio-list-item a:hover{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -510,45 +510,18 @@ margin: 0 0 20px;
 padding: 0;
 }
 
-.socials .socials-item{
+.socials .socials-item a{
     color:#ffffff;
     background-color:#FFFFFF1A;
 }
 
-.socials .socials-item:hover,
-.socials .socials-item:focus {
+.socials .socials-item a:hover,
+.socials .socials-item a:focus {
     background-color: var(--brand-color);
 }
 
 /*----------------------- icons-SVG-------------------- */
 
-.icon-envelope{
+.contacts-icon{
     margin-right: 10px;
-    width: 16px;
-    height: 12px;
-    fill:currentColor;
 }
-
-/* .icon-instagram {
-    width: 20px;
-    height: 20px;
-    fill:currentColor;
-}
-
-.icon-twitter {
-    width: 20px;
-    height: 20px;
-    fill:currentColor;
-}
-
-.icon-facebook {
-    width: 20px;
-    height: 20px;
-    fill:currentColor;
-}
-
-.icon-linkedin {
-    width: 20px;
-    height: 20px;
-    fill:currentColor;
-} */
