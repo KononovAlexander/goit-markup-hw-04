@@ -32,8 +32,8 @@ body {
 }
 
 .container{
-    width: 1230px;
-    padding:  0 15px 0 15px;
+    width: 1200px;
+    padding:  0 15px;
     margin: 0 auto;
 }
 .flex-block{
@@ -113,8 +113,6 @@ body {
 }
 
 .contacts-item {
-    /* display: flex; */
-    /* align-items:center; */
     margin-left: auto;
     color: var(--text-color);
     
@@ -143,8 +141,8 @@ body {
 
 .main-nav-item a:hover,
 .main-nav-item a:focus,
-.contacts-item:hover,
-.contacts-item:focus {
+.contacts-item a:hover,
+.contacts-item a:focus {
     color: var(--brand-color);
 }
 
@@ -206,7 +204,7 @@ body {
     margin-bottom: 30px;
     background-color:#F5F4FA;
     border-radius: 4px;
-    width:270px;
+    /* width:270px; */
     height: 120px;
 }
 
@@ -349,8 +347,8 @@ margin: 0 0 50px;
     border: 1px solid  currentColor;
 }
 
-.partners-item:hover,
-.partners-item:focus {
+.partners-item a:hover,
+.partners-item a:focus {
     color: var(--brand-color);
 }
 
@@ -402,7 +400,8 @@ margin: 0 0 50px;
     width: 370px;
 }
 
-.portfolio-list-item a:hover{
+.portfolio-list-item a:hover,
+.portfolio-list-item a:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -450,6 +449,11 @@ margin: 0 0 50px;
     padding: 60px 0;
 }
 
+.footer-container {
+    display: flex;
+    justify-content: start;
+}
+
 .logo.foot{
     display: block;
     margin: 0 0 20px 0;
@@ -473,13 +477,10 @@ margin: 0 0 50px;
 }
 
 .address {
-    display: inline-block;
     margin-right: 70px;
 }
 
 .socials {
-    display: inline-block;
-    vertical-align: top;
     margin-top:12px;
     padding: 0;
 }
