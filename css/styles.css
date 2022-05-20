@@ -146,6 +146,10 @@ body {
     color: var(--brand-color);
 }
 
+.main-nav-active a{
+    color: var(--brand-color);
+}
+
 .hero {
     padding-top: 200px;
     padding-bottom: 200px;
@@ -451,7 +455,7 @@ margin: 0 0 50px;
 
 .footer-container {
     display: flex;
-    justify-content: start;
+    align-items:baseline;
 }
 
 .logo.foot{
@@ -481,7 +485,6 @@ margin: 0 0 50px;
 }
 
 .socials {
-    margin-top:12px;
     padding: 0;
 }
 
